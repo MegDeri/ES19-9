@@ -24,7 +24,7 @@ class App extends React.Component {
     render() {
       return (
         <div>
-          <form onSubmit={event => this.onSubmit(event)}>
+          <form className={'searchGit'} onSubmit={event => this.onSubmit(event)}>
             <label htmlFor="searchText">Search by user name</label>
             <input
               type="text"
@@ -53,9 +53,9 @@ class App extends React.Component {
   }
 
   class User extends React.Component {
-    render() {
+    render() { 
       return (
-        <div>
+        <div className={'searchResult'} >
           <img src={this.props.user.avatar_url} style={{maxWidth: '100px'}}/>
           <a href={this.props.user.html_url} target="_blank">{this.props.user.login}</a>
         </div>
