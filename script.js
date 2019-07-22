@@ -9,7 +9,6 @@ class App extends React.Component {
   
     onChangeHandle(event) {
       this.setState({searchText: event.target.value});
-      console.log(event.target.value)
     }
   
     onSubmit(event) {
@@ -24,7 +23,7 @@ class App extends React.Component {
     render() {
       return (
         <div>
-          <form className={'searchGit'} onSubmit={event => this.onSubmit(event)}>
+          <form className="searchGit" onSubmit={event => this.onSubmit(event)}>
             <label htmlFor="searchText">Search by user name</label>
             <input
               type="text"
@@ -55,7 +54,7 @@ class App extends React.Component {
   class User extends React.Component {
     render() { 
       return (
-        <div className={'searchResult'} >
+        <div className="searchResult">
           <img src={this.props.user.avatar_url} style={{maxWidth: '100px'}}/>
           <a href={this.props.user.html_url} target="_blank">{this.props.user.login}</a>
         </div>
